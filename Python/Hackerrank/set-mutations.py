@@ -1,0 +1,27 @@
+na=int(input())
+seta=set()
+seta.update(map(int,input().split()))
+t=int(input())
+while(t>0):
+    mutation,nb=input().split()
+    if(mutation=="intersection_update"):
+        setb=set()
+        setb.update(map(int,input().split()))
+        seta.intersection_update(setb)
+    elif(mutation=="update"):
+        setb=set()
+        setb.update(map(int,input().split()))
+        seta.update(setb)
+    elif(mutation=="symmetric_difference_update"):
+        setb=set()
+        setb.update(map(int,input().split()))
+        seta.symmetric_difference_update(setb)
+    elif(mutation=="difference_update"):
+        setb=set()
+        setb.update(map(int,input().split()))
+        seta.difference_update(setb)
+    t-=1
+sum=0
+for i in seta:
+    sum+=i
+print(sum)

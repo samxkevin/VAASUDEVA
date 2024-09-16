@@ -1,0 +1,17 @@
+C++/HackerRank/*.exe
+$RECYCLE.BIN/
+C Lang/.vscode/
+C++/.tmp.driveupload
+Kotlin/.idea
+Kotlin/.idea
+Python/UmeshSirClasses/__pycache__/desktop.ini
+Python/Projects/ProjectBMS
+C++/Codechef/*.exe
+desktop-tutorial/
+.venv/
+.vscode/
+Meta-Llama-3.1-8B-Instruct/
+Meta-Llama-3-8B/
+System Volume Information/
+Thumbs.db
+desktop.ini

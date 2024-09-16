@@ -1,0 +1,265 @@
+for variables python language when put in math operations first calculate the lhs then they assign new value to var
+python can get confused when we use tab because we can have indentation(if for statements) errors
+if 
+  print
+  print
+print
+
+and we can also nest multiple indents in the same indent it doesn't make any difference
+if, elif, else
+vars continue only when false appears in indentations appear. In nests if true comes then the compiler automatically goes to compile the next nest
+its like try and except situation you put a try nest then you put a except nst if try nest is okay then it python prompts to the try nest and skips except vice versa...
+loops are like if and elif but they don't stop continue the code in the nest until they get false so they are like opp to if and elif
+so infinite loops can also exist
+zerotrip loops also exist 
+x = ("apple", "banana", "cherry")
+tuple
+if there are square brackets it becomes list
+x = {"name" : "John", "age" : 36}
+dict
+
+'''Multiline Strings
+You can assign a multiline string to a variable by using three quotes:
+Example
+You can use three double quotes:'''
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+//Getting the first character of the string txt.
+txt = "Hello World"
+x = 
+txt[0]
+
+//Slicing: Get the characters from index 2 to index 4 (llo).
+txt = "Hello World"
+x = 
+txt[2:5]
+
+//Return the string without any whitespace at the beginning or the end.
+txt = " Hello World "
+x = 
+txt.strip()
+
+//Convert the value of txt to upper case.
+txt = "Hello World"
+txt = txt.upper()
+
+//Replace the character H with a J.
+txt = "Hello World"
+txt = txt.replace("H","J")
+
+//Insert the correct syntax to add a placeholder for the age parameter.
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+//The statement below would print a Boolean value, which one?
+print(bool("abc"))
+True
+//false is evident for 0
+
+//Use the correct membership operator to check if "apple" is present in the fruits object.
+fruits = ["apple", "banana"]
+if "apple" in fruits:
+  print("Yes, apple is a fruit!")
+
+//Use the correct comparison operator to check if 5 is not equal to 10.
+if 5 != 10:
+   print("5 and 10 is not equal")
+
+//Use the correct logical operator to check if at least one of two statements is True.
+if 5 == 10 
+or
+ 4 == 4:
+  print("At least one of the statements is true")
+  
+//Print the second item in the fruits list.
+fruits = ["apple", "banana", "cherry"]
+print(fruits[1])
+
+//Change the value from "apple" to "kiwi", in the fruits list.
+fruits = ["apple", "banana", "cherry"]
+fruits[0] = "kiwi"
+
+Use the append method to add "orange" to the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+
+Use the insert method to add "lemon" as the second item in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+ "lemon")
+ 
+ Use the insert method to add "lemon" as the second item in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.insert(1,
+ "lemon")
+ 
+ Use the remove method to remove "banana" from the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+
+Use negative indexing to print the last item in the list.
+
+
+fruits = ["apple", "banana", "cherry"]
+print(
+fruits[-1]
+)
+
+Use a range of indexes to print the third, fourth, and fifth item in the list.
+
+
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(fruits[
+2:5
+])
+
+Use the correct syntax to print the number of items in the list.
+
+
+fruits = ["apple", "banana", "cherry"]
+print(
+len(fruits)
+)
+
+//Use the correct syntax to print the first item in the fruits tuple.
+
+
+fruits = ("apple", "banana", "cherry")
+print(
+fruits[0]
+)
+
+Use a range of indexes to print the third, fourth, and fifth item in the tuple.
+
+
+fruits = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(fruits[
+2:5
+])
+
+Check if "apple" is present in the fruits set.
+
+
+fruits = {"apple", "banana", "cherry"}
+if "apple" 
+in
+ fruits:
+  print("Yes, apple is a fruit!")
+  
+//Use the add method to add "orange" to the fruits set.
+
+
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+
+//Use the correct method to add multiple items (more_fruits) to the fruits set.
+
+
+fruits = {"apple", "banana", "cherry"}
+more_fruits = ["orange", "mango", "grapes"]
+fruits.update(more_fruits)
+
+//Use the discard method to remove "banana" from the fruits set.
+
+
+fruits = {"apple", "banana", "cherry"}
+fruits.discard("banana")
+  
+//Print i as long as i is less than 6.
+
+
+i = 1
+while
+ i < 6
+:
+
+  print(i)
+  i += 1  
+
+//Stop the loop if i is 3.
+
+
+i = 1
+while i < 6:
+  if i == 3:
+    
+break
+
+  i += 1
+  
+//Stop the loop if i is 3.
+
+
+i = 1
+while i < 6:
+  if i == 3:
+    
+break
+
+  i += 1  
+  
+//In the loop, when i is 3, jump directly to the next iteration.
+
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    
+continue
+
+  print(i)
+
+//In the loop, when i is 3, jump directly to the next iteration.
+
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    
+continue
+
+  print(i)
+
+//Print a message once the condition is false.
+
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+
+  print("i is no longer less than 6")
+
+//Loop through the items in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+for
+ x 
+in
+ fruits
+:
+
+  print(x)
+
+  
+
+
+
+
+
