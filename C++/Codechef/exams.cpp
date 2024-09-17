@@ -6,7 +6,7 @@ int main(){
     while(t--){
         int x,y,z;
         cin>>x>>y>>z;
-        if((2*z>x*y){
+        if(2*z>x*y){
             cout<<"YES\n";
         }else{
             cout<<"NO\n";
