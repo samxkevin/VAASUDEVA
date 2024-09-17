@@ -6,7 +6,7 @@ int main(){
     while(t--){
         int x,y,z;
         cin>>x>>y>>z;
-        if(z*100/(x*y)>50){
+        if((2*z>x*y){
             cout<<"YES\n";
         }else{
             cout<<"NO\n";
