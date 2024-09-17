@@ -1,5 +1,4 @@
-C Lang/*.exe
-C++/HackerRank/*.exe
+*.exe
 .tmp.driveupload/
 ESPSOURCECODE.cpp
 $RECYCLE.BIN/
@@ -9,7 +8,6 @@ Kotlin/.idea
 Kotlin/.idea
 Python/UmeshSirClasses/__pycache__/desktop.ini
 Python/Projects/ProjectBMS
-C++/Codechef/*.exe
 desktop-tutorial/
 .venv/
 .vscode/
