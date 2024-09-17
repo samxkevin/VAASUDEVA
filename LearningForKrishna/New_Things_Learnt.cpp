@@ -127,3 +127,25 @@ Ex: v.erase(v.begin()+4); (erases the fifth element of the vector v)
 Removes the elements in the range from start to end inclusive of the start and exclusive of the end.
 Ex:v.erase(v.begin()+2,v.begin()+5);(erases all the elements from the third element to the fifth element.)
 */
+//********17-09********//
+//I don't know how but I lost some important code here due to some issue in git... hope that I will find 
+//them back... Everything was fine yesterday...
+//Anyways back to grind...
+/* ios::sync_with_stdio(0);
+cin.tie(0); */
+//The Block of code above when put it in the beginning of our code makes our code faster since
+/*
+1.ios::sync_with_stdio(0):Disables synchronization between C++ streams (cin/cout) and C's stdio 
+(scanf/printf), improving I/O performance by removing compatibility overhead.
+2.cin.tie(0): Unties cin from cout, preventing automatic flushing of cout before each cin, 
+which speeds up programs with lots of I/O operations.
+Why useful?
+These optimizations reduce the time spent on I/O, especially in competitive programming where handling large inputs and outputs efficiently is crucial.
+*/
+//flushmean forcing the output buffer to write its contents to the intended output destination immediately.
+//Note that the newline "\n" works faster than endl, because endl always causes a flush operation.
+//Sometimes the program should read a whole input line, possibly containing spaces.
+//This can be accomplished by using the getline function:
+/* string s;
+getline(cin, s); */
+//Be careful went to use 'int' and 'long long' when writing programs.
