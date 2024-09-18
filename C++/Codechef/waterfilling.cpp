@@ -9,7 +9,7 @@ int main(){
         if(x+y+z<2){
             cout<<"Water filling time"<<endl;
         }else{
-            cout<<"Notnow"<<endl;
+            cout<<"Not now"<<endl;
         }
     }
 }

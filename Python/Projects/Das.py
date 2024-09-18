@@ -12,17 +12,14 @@ import pyaudio
 import struct
 import subprocess
 from ytmusicapi import YTMusic
-import transformers
 import torch
-from transformers import AutoTokenizer,AutoModelForCausalLM
-model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-pipeline = transformers.pipeline(
-    "text-generation",
-    model=model_id,
-    model_kwargs={"torch_dtype": torch.bfloat16,"pad_token_id":128001},
-    device_map="auto"
-)
+from transformers import GPT2Tokenizer,GPT2LMHeadModel
+model_name="gpt2"
+tokenizer=GPT2Tokenizer.from_pretrained(model_name)
+model=GPT2LMHeadModel.from_pretrained(model_name)
+model=GPT2LMHeadModel.from_pretrained(model_name)
+device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model.to(device)
 ytmusic=YTMusic()
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
@@ -135,41 +132,16 @@ def wikipediasummary(order):
         context = "An error occurred while fetching information. Please try again later."
     return context
 def other(order):
-    messages = [
-        {"role": "system", "content": wikipediasummary(order)},
-        {"role": "user", "content": order},
-        {"role": "assistant", "content": "You are a funny assistant."}
-    ]
-    print(2,messages)
-    prompt = pipeline.tokenizer.apply_chat_template(
-        messages, 
-        tokenize=False, 
-        add_generation_prompt=True
-    )
-    print(3,prompt)
-    terminators = [
-        pipeline.tokenizer.eos_token_id,
-        pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-    ]
-    print(4,terminators)
+    prompt = order
     try:
-        print("In Try Block now...")
-        outputs = pipeline(
-            prompt,
-            max_new_tokens=256,
-            eos_token_id=terminators,
-            do_sample=True,
-            temperature=0.6,
-            top_p=0.9,
-            pad_token_id = pipeline.tokenizer.eos_token_id
-        )
-        print(f"LLM output: {outputs}")
-        generated_text = outputs[0]["generated_text"]
-        start_index = generated_text.find("assistant")
-        if start_index != -1:
-            response = generated_text[start_index:].split("assistant")[1].strip()
-        else:
-            response = "I couldn't generate a proper response."
+        inputs = tokenizer.encode(prompt, return_tensors='pt')
+        attention_mask = torch.ones(inputs.shape, device=inputs.device)
+        outputs = model.generate(inputs, attention_mask=attention_mask, max_length=100, do_sample=True)
+        model.config.pad_token_id = tokenizer.eos_token_id
+
+        # Decode the generated tokens
+        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        print(response)
     except Exception as e:
         response = "There might be some trouble processing your request. Please try again."
         print("Error: ",e)
