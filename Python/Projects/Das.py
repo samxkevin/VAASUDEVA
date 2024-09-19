@@ -144,7 +144,7 @@ def other(order):
     except Exception as e:
         response = "There might be some trouble processing your request. Please try again."
         print("Error: ",e)
-    print(f"Response: {response}")
+    print(f"Response:{response}")
     speak(response)
 def readablilityEnhancer(text):
     readableText=re.sub(r'\s*[;=]\s*|\s*\(.*?\)\s*','', text)
