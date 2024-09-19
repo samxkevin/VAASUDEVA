@@ -121,8 +121,8 @@ def playgame():
             break
 def wikipediasummary(order):
     try:
-        context = readablilityEnhancer(wikipedia.summary(order, sentences=3))
-        print(1,context)
+        context = readablilityEnhancer(wikipedia.summary(order, sentences=2))
+        print(context)
     except wikipedia.exceptions.DisambiguationError:
         context = "It seems there are multiple topics related to your query. Please be more specific."
     except wikipedia.exceptions.PageError:
@@ -132,16 +132,15 @@ def wikipediasummary(order):
         context = "An error occurred while fetching information. Please try again later."
     return context
 def other(order):
-    prompt = order
+    prompt=f"User: {order}\nAssistant:"
     try:
-        inputs = tokenizer.encode(prompt, return_tensors='pt')
-        attention_mask = torch.ones(inputs.shape, device=inputs.device)
-        outputs = model.generate(inputs, attention_mask=attention_mask, max_length=100, do_sample=True)
-        model.config.pad_token_id = tokenizer.eos_token_id
-
-        # Decode the generated tokens
+        inputs=tokenizer.encode(prompt, return_tensors='pt')
+        attention_mask=torch.ones(inputs.shape, device=inputs.device)
+        outputs=model.generate(inputs, attention_mask=attention_mask, max_length=100, do_sample=True)
+        model.config.pad_token_id=tokenizer.eos_token_id
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         print(response)
+        response = response.split("Assistant:")[-1].strip()
     except Exception as e:
         response = "There might be some trouble processing your request. Please try again."
         print("Error: ",e)
@@ -237,7 +236,7 @@ def maincode():
          else:
              try:
                  print("Results gonna take time when things come to here.")
-                 speak("okay...")
+                 speak("...")
                  other(order)
              except Exception as e:
                  print(f"Error: {e}")
