@@ -6,5 +6,7 @@ unconnected until we have an equation. The world is going to a field called Hype
 """
 Andrea Karparthy: He was the co-founder o open-AI. He was the CTO of AI division of Tesla. He made a series of zero to hero. It is worth it.
 ANN- Artificial Neural Network. Hidden Layers are also called as Black-Box. Gaussian Distribution. Probablity Distribution Function, Derivatives important topics
-in this case.  If we have to be great in AI we have to intimate with maths. We have to improve the grounding in math.
+in this case.  If we have to be great in AI we have to intimate with maths. We have to improve the grounding in math. Intractable Problem: y has no relationship with x.
+We have an assumed function and training data for it. give input for that. compare that with the actual results. There will be errors. With that error, change the 
+parameters of the assumed function. Repeat this for accurate and precise results(EPOC). 
 """
