@@ -6,7 +6,11 @@ int main(){
     while(t--){
         int n,x;
         cin>>n>>x;
-        cout<<((n*x-((n*x)%4))/4)<<"\n";
+        int res=n*x;
+        if(res%4==1)res+=3;
+        if(res%4==2)res+=2;
+        if(res%4==3)res+=1;
+        cout<<res/4<<endl;
     }
     return 0;
 }
