@@ -149,3 +149,25 @@ These optimizations reduce the time spent on I/O, especially in competitive prog
 /* string s;
 getline(cin, s); */
 //Be careful went to use 'int' and 'long long' when writing programs.
+//********22-09********//
+//I learnt about set today... (for the problem contains a duplicate in leetcode)
+/* In C++, a `set` is part of the Standard Template Library (STL) and stores unique elements in sorted order. Here's how you should think about using it:
+
+1. Include the header:  
+   You need to include the `<set>` header to use it.
+2. Basic operations:
+   - Insert: Adds an element to the set.
+   - Find: Checks if an element exists.
+   - Size: Returns the number of elements in the set.
+Basic Structure:
+- Insertion:
+   ```cpp
+   std::set<int> mySet;
+   mySet.insert(5); // Inserts 5 into the set
+   ```
+- Checking for duplicates:
+   ```cpp
+   if (mySet.find(5) != mySet.end()) {
+       // 5 exists in the set
+   }
+   ``` */
