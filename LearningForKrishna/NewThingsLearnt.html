@@ -1,4 +1,4 @@
-<!--
+<!--23-09-2024
 Notes from freecodecamp's certification shall be written here:
 To ensure your `<p>` element with the text `% Daily Value *` has the `no-divider` class without removing the existing classes, you should
 update the class attribute properly. In HTML, class names should be space-separated, and there should be no commas within the class gattribute.
@@ -12,8 +12,15 @@ html
   <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
 </div>
 Changes:
-1. In the class attribute of the first `<p>` tag, I removed the comma and added `no-divider` correctly as:html
+1. In the class attribute of the first `<p>` tag, I rLearnt emoved the comma and added `no-divider` correctly as:html
    class="bold right no-divider
 2.Similarly, for the second `<p>` with the `class="indent no-divider"`, the comma was removed.
 Now, the classes should work as expected.
+The :not pseudo-selector can be used to select all elements that do not match the given CSS rule.
+Example Code
+div:not(#example) {
+  color: red;
+}
+The above selects all div elements without an id of example.
+Modify your .daily-value p selector to exclude the .no-divider elements.
 -->
