@@ -172,3 +172,20 @@ Basic Structure:
    }
    ```
    //in the same way we can iterate elements from a vector to the set */
+//********23-09********//
+//Must do patterns before DSA:
+/* #include<bits/stdc++.h>
+using namespace std;
+int main(){
+  for(int i=0;i<5;i++){
+    cout<<"*****\n";
+  }
+} */
+/* 
+The above code block prints:
+*****
+*****
+*****
+*****
+*****
+*/
