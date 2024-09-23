@@ -170,4 +170,5 @@ Basic Structure:
    if (mySet.find(5) != mySet.end()) {
        // 5 exists in the set
    }
-   ``` */
+   ```
+   //in the same way we can iterate elements from a vector to the set */
