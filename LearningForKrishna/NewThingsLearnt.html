@@ -1,34 +1,9 @@
-<!--23-09-2024
-Notes from freecodecamp's certification shall be written here:
-To ensure your `<p>` element with the text `% Daily Value *` has the `no-divider` class without removing the existing classes, you should
-update the class attribute properly. In HTML, class names should be space-separated, and there should be no commas within the class gattribute.
-Here’s how you can fix it:
-Correct Code:
-html
-<div class="daily-value small-text">
-  <p class="bold right no-divider">% Daily Value *</p>
-  <div class="divider"></div>
-  <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
-  <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
-</div>
-Changes:
-1. In the class attribute of the first `<p>` tag, I rLearnt emoved the comma and added `no-divider` correctly as:html
-   class="bold right no-divider
-2.Similarly, for the second `<p>` with the `class="indent no-divider"`, the comma was removed.
-Now, the classes should work as expected.
-The :not pseudo-selector can be used to select all elements that do not match the given CSS rule.
-Example Code
-div:not(#example) {
-  color: red;
-}
-The above selects all div elements without an id of example.
-Modify your .daily-value p selector to exclude the .no-divider elements.
--->
-<!--
-HTML, CSS, Bootstrap are domain specific languages
--->
-<!--Registration Page-->
 <html>
+    <style>
+        body{
+            background-color:gray;
+        }
+    </style>
     <head>
         <title>REGISTRATION PAGE</title>
     </head>
@@ -39,12 +14,16 @@ HTML, CSS, Bootstrap are domain specific languages
                 <td><input type="text"></td>
             </tr>
             <tr>
+                <td>Password:</td>
+                <td><input type = "password"></td>
+            </tr>
+            <tr>
                 <td>Father Name:</td>
                 <td><input type="text"></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type ="text"></td>
+                <td><input type ="mail"></td>
             </tr>
             <tr></tr>
                 <td>Date:</td>
@@ -67,10 +46,23 @@ HTML, CSS, Bootstrap are domain specific languages
                     <input type = "radio" name="hobbies">reading</td>
             </tr>
             <tr>
-              <td>Upload File:</td>
-              <td><input type ="file" name ="file"></td>
+                <td>Upload File:</td>
+                <td><input type ="file" name ="file"></td>
             </tr>
             <tr>
+                <td>Course</td>
+                <td>
+                    <select>
+                        <option>---select---</option>
+                        <option>CSE</option>
+                        <option>CSO</option>
+                        <option>CSD</option>
+                        <option>CSM</option>
+                        <option>ECE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr></tr>
                 <td><input name ="Submit"type ="submit"></td>
             </tr>
         </table>
