@@ -6,7 +6,7 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        cout<<n*15<<"\n";
+        cout<<n*10<<"\n";
     }
     return 0;
 }
