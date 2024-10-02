@@ -9,5 +9,5 @@ int main(){
         if(a>b+c+d||b>a+c+d||c>a+b+d||d>a+b+c)cout<<"yes\n";
         else(cout<<"no\n");
     }
-    return 0;
+    nreturn 0;
 }
