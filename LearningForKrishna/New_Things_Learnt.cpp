@@ -227,3 +227,42 @@ The above code block prints:
 1234
 12345
 */
+/* #include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n=5;
+  int c=0;
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){  
+      cout<<i;
+    }cout<<"\n";
+  }
+  return 0;
+} */
+/*
+The Above code block prints:
+1
+22
+333
+4444
+55555
+*/
+/* #include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n=5;
+  for(int i=0;i<n;i++){
+    for(int j=n;j>i;j--){
+      cout<<"*";
+    }cout<<"\n";
+  }
+  return 0;
+} */
+/*
+The Above code block prints:
+*****
+****
+***
+**
+*
+*/
