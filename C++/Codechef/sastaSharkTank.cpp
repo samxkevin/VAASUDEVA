@@ -6,7 +6,9 @@ int main(){
     while(t--){
         int x,y;
         cin>>x>>y;
-        if((x<y)&&abs(x-y)<=100)cout<<"ANY\n";
+        x*=10;
+        y*=5;
+        if(x==y)cout<<"ANY\n";
         else if(x>y)cout<<"FIRST\n";
         else(cout<<"SECOND\n");
     }
