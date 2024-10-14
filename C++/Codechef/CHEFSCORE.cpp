@@ -9,5 +9,5 @@ int main(){
         if(y/x<=n&&y%x==0)cout<<"yes\n";
         else(cout<<"no\n");
     }
-    return 0;
+    return 0;//test
 }
