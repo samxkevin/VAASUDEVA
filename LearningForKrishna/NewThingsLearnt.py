@@ -166,6 +166,101 @@ for _ in l1:
         sum=0
     l2.append(sum)
 print(max(l2)) """
-l1=list(map(int,input().split("")))
+""" l1=list(map(int,input().split("")))
 l2=list(map(int,input().split("")))
-sum=0
+sum=0 """
+
+'''
+You are working on a team that is building a custom URL shortening service. The service 
+needs to create unique, user-friendly abbreviations for long URLs, while ensuring that 
+no two different URLs map to the same abbreviation.
+
+To validate whether a custom abbreviation correctly maps to the original URL, your team 
+has built an abbreviation validation system. However, the system must also check for 
+compliance with the following rules:
+	- The abbreviation can replace any number of non-adjacent, non-empty substrings 
+	  in the URL with their lengths (as integers).
+	- The lengths of these substrings must not have leading zeros.
+	- Adjacent substrings cannot be replaced, and no empty substrings should be replaced.
+	- The abbreviation must be able to fully and accurately recreate the original URL.
+
+Your task is to implement a code that to determine if the abbreviation is valid for the given 
+URL or not. If it is valid, print true, otherwise "false"
+
+
+Constraints:
+------------
+1 <= URL.length <= 50, The URL consists of lowercase English letters.
+1 <= abbr.length <= 20, abbr consists of lowercase English letters and digits.
+All integers in abbr will fit in a 32-bit integer.
+
+
+Input Format:
+-------------
+Line-1: Two space separated strings, URL and abbr.
+
+Output Format:
+-------------
+A Boolean Value.
+
+
+Sample Input-1:
+---------------
+hypertexttransferprotocol h23l
+
+Sample Output-1:
+----------------
+True
+
+Explanation:
+------------
+The abbreviation "h23l" corresponds to "h ypertexttransferprotoco l" where the substring "ypertexttransferprotoco" is replaced by its length of 23.
+
+
+Sample Input-2:
+---------------
+applicationprogramminginterface app843minginterface
+
+Sample Output-2: 
+----------------
+False
+
+Explanation:
+------------
+The abbreviation "app843minginterface" corresponds to "app lication prog ram minginterface" where the substrings "lication", "prog", "ram" are adjacent substrings, and not allowed to be replaced
+
+
+Sample Input-3:
+---------------
+webdevelopment webd0evelopment
+
+Sample Output-3: 
+----------------
+False
+
+Explanation:
+------------
+The abbreviation "webd0evelopment" is invalid because "0" is not allowed 
+(no leading zeros, and an empty substring cannot be replaced).
+
+'''
+""" url,abb=input().split()
+i,j=0,0
+n,m=len(url),len(abb)
+while i<n and j<m:
+    if abb[j].isdigit():
+        if abb[j]=='0':
+            print(False)
+            exit()
+        num=0
+        while j<m and abb[j].isdigit():
+            num=num*10+int(abb[j])
+            j+=1
+        i+=num
+    else:
+        if i>=n or url[i]!=abb[j]:
+            print(False)
+            exit()
+        i+=1
+        j+=1
+print(i==n and j==m) """
