@@ -1,15 +1,18 @@
 #include<bits/stdc++.h>
+#include <boost/multiprecision/cpp_int.hpp>
 using namespace std;
+using namespace boost::multiprecision;
+cpp_int fact(int n){
+    if(n==0||n==1)
+        return 1;
+    return n*fact(n-1);
+}
 int main(){
     int t;
     cin>>t;
-    int i;
     while(t--){
         int n;
         cin>>n;
-        for(int i=n-1;i>0;i--){
-            n*=i;
-        }
-        cout<<n<<"\n";
+        cout<<fact(n)<<"\n";
     }return 0;
 }
